@@ -30,14 +30,14 @@
       var item = poop[Math.floor(Math.random() * poop.length)];
       document.getElementById("funny").src = item;
     }
-    function getRandomInt(min, max) {
+    function getRandomIntI(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+      return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
     }
     function fart() {
       alert("You are now entering a virtual fartroom where you can hang out with fellow farters.")
-      var poop = getRandomInt(0, 64206261)
+      var poop = getRandomIntI(0, 64206261)
       var farter = "https://stackoverflow.com/questions/9" + poop.toString() + "/"
       window.location.replace(farter);
     }
