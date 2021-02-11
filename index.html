@@ -31,13 +31,11 @@
       document.getElementById("funny").src = item;
     }
     function getRandomIntI(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+      return Math.floor(Math.random() * (max - min) ) + min;
     }
     function fart() {
       alert("You are now entering a virtual fartroom where you can hang out with fellow farters.")
-      var poop = getRandomIntI(0, 64206261)
+      var poop = getRandomInt(1, 66164635)
       var farter = "https://stackoverflow.com/questions/9" + poop.toString() + "/"
       window.location.replace(farter);
     }
